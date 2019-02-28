@@ -123,8 +123,6 @@ class BinaryMinHeap(object):
         child_index = left_index
         if (right_index < last_index and self.items[left_index] > self.items[right_index]):
             child_index = right_index
-            print(item, self.items[left_index], self.items[right_index])
-        else: print(item, self.items[left_index])
         # Swap this item with a child item if values are out of order
         child_item = self.items[child_index]
         if (item > child_item):
