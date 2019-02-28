@@ -69,9 +69,11 @@ class TestBinaryMinHeap(unittest.TestCase):
         heap = BinaryMinHeap()
         items = random.sample(range(1000), 50)
         for item in items:
+            print("inserting: %d"%(item))
             heap.insert(item)
         assert heap.size() == len(items)
         for item in sorted(items):
+            print(item)
             assert heap.delete_min() == item
         assert heap.size() == 0
 
