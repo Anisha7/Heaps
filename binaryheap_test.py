@@ -41,6 +41,8 @@ class TestBinaryMinHeap(unittest.TestCase):
     def test_insert_and_get_many_random_items(self):
         heap = BinaryMinHeap()
         items = random.sample(range(1000), 50)
+        # items = [27, 116, 94, 139, 211, 299, 337, 201, 258, 249, 256, 336, 434, 846, 366, 723, 484, 401, 399, 607, 481, 598, 410, 393, 348, 788, 696, 856, 941, 911, 965, 973, 834, 795, 773, 845, 669, 864, 426, 906, 737, 837, 930, 903, 609, 533, 755, 908, 735]
+        print(items)
         for index, item in enumerate(items):
             heap.insert(item)
             assert heap.size() == index + 1
@@ -68,6 +70,7 @@ class TestBinaryMinHeap(unittest.TestCase):
     def test_insert_and_delete_many_random_items(self):
         heap = BinaryMinHeap()
         items = random.sample(range(1000), 50)
+        print(items)
         for item in items:
             print("inserting: %d"%(item))
             heap.insert(item)
